@@ -1,0 +1,18 @@
+Namaste React
+* Npm init creates the package.json
+* Package.json is configuration for npm.it keeps track of what approx version dependency uses
+* 2 types of dependencies -  dev dependency and normal dependency 
+- Dev Dependency - it is required for development to install it use npm install -D …..
+- Normal used in production also
+* Package.lock.json keeps track of exact version of the dependency
+* Integrity in package.lock.json: it is a hash, to verify whatever is on dev machine its same on production
+* Node module is the data base it contains the actual data of the package installed. Node module is collection of packages.
+* Package having there own dependency is know as transitive dependency
+* No node module in git/production
+* Package.json and package-lock.json should be in git/prod
+* Just like we have npm we have npx, in npm we install the package and in npx we execute the package
+* CDN is not a good way to get react in code, because firstly its a costly operation
+* Good way is to have react in node module, i.e. npm install react 
+* Parcel Bundle used. Read more https://parceljs.org/
+* While building using parcel remove main from package.json as it will conflict with npx parcel build index.html, where index.html is the entry point 
+* Running parcel npm parcel index.html {index.html is entry point}
