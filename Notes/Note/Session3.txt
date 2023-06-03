@@ -1,0 +1,31 @@
+Namaste React
+*  To start project write the script in package.json , to run the script write npm run {script name} e.g. npm run start , npm run build
+* Note:- npm run start === npm start “start” keyword reserved by npm
+* When used root.render, it will “replace” the root element 
+* JSX=> is javascript syntax which is easier to write react element
+* JSX is not a part of react
+* We can write react without JSX, JSX is used because it makes developer life easy 
+* JSX is not HTML in javascript , both are different
+* JSX is HTML-like or XML-like syntax.
+* JSX (code is transpiled before it reaches the JS engine ) - done by PARCEL (not done by parcel)- done by babel (installed by parcel)  
+* Babel- JS Compiler / Transpiler, takes JSX and converts into the code that js engine understands
+* JSX => Transpiles to React.createElement => ReactElement JS object =>  HTML Element (render) 
+* Attributes in JSX are in camel case
+* If writing JSX in multiple line in js file write inside ()
+* Everything in React is Component
+* Two types of Component - 
+    * Functional  component - New 
+    * Class based component - Old 
+* Functional  component is just a normal Javascript function, which return some JSX code. (Always start name it with capital letter)
+* A function returning the JSX code is React Component
+* Composing two Components into each other is Component Composition
+* JSX takes care of injection attacks, JSX sanitises the data in {}. It prevent Cross site scripting attacks
+* Functional Component can be called in three ways
+    * <Title/>
+    * <Title></Title>
+    * {Title()}
+* JSX can only have one parent element 
+* React Fragment :- Behaves like empty tag <React.Fragment> , we can use shorthand <></> empty tags to wrap multiple elements in JSX 
+    * It won’t be visible in Browsers element option 
+* Can we have Multiple Roots? Can we use React.Fragment in React.Fragment?
+
