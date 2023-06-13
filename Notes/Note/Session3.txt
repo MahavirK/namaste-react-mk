@@ -1,5 +1,5 @@
 Namaste React
-*  To start project write the script in package.json , to run the script write npm run {script name} e.g. npm run start , npm run build
+*  To start project write the script in package.json , to run the script write npm run {script name}e.g. npm run start , npm run build
 * Note:- npm run start === npm start “start” keyword reserved by npm
 * When used root.render, it will “replace” the root element 
 * JSX=> is javascript syntax which is easier to write react element
