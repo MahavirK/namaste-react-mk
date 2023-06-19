@@ -1,0 +1,23 @@
+* React File Structure  :- https://legacy.reactjs.org/docs/faq-structure.html
+* .JSX and .JS are one and the same.  
+* While importing can use  “.filename.js” or “.filename” 
+* Never keep hard coded data in component file
+* Two types of export/ import : default and named
+* In one file we can have only one default export e.g. end of the file export default Body;
+* If need to export multiple things from one file use named export e.g. export const LOGO_URL = “..”;
+* Whenever importing named export use { } wile importing not used for default export
+* Can I use named export along with default export?  Yes https://exploringjs.com/es6/ch_modules.html#sec_mixing-named-and-default-exports
+* What react is fast? : Because it can do faster, efficient DOM manipulation, Virtual DOM , Diff algorithm , Reconcialtion
+* React Hooks
+    * Normal JS utilities function , need to import from “react” as named import { } 
+    * 2 important hooks 
+        * useState() - super powerful state variables in react.
+            * When you call useState() it fives you state variable, and how do you receive it: 
+                * Const [listOfRes] = useState();  // State Variable
+                * Above is same as like let listOfRes; // Normal JS Variable
+                * Const [listOfRes] = useState( [ ] ); —> Whatever we pass in () is the default value   
+                * To set the value of state variable use : const [listOfRes , setListOfRes] = useState(), setListOfRes is used to update the state variable.
+                * Whenever a State variable updates/changes, react re-renders the component. 
+        * useEffect()
+* React Fiber : https://github.com/acdlite/react-fiber-architecture 
+* React Basic : https://github.com/reactjs/react-basic 

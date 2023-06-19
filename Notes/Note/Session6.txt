@@ -1,0 +1,11 @@
+* Monolith Architecture :- 
+* Microservice Architecture :- 
+* Separation of Concerns / Single responsibility principle. 
+* React has one of the best render mechanisms.
+* UseEffect: 
+    * Syntax  - useEffect (()=>{console.log(“UseEffect Called”), []}); 
+    * First argument is callback function, Second argument is the dependency array.
+    * It will be called once the respective component is rendered successfully.  (Render cycle is finished)
+* fetch() is given to us by browsers and not by JS/React. Its super power JS engine has.
+* Optional Chaining
+* Whenever state variable updates react triggers reconciliation cycle( re-renders component ) 
