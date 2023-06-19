@@ -2,7 +2,7 @@ import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 
 const Header = () => {
-  const [btnNameReact, setBtnNameReact] = useState("Login");
+  const [loggedInUser, setLoggedInUser] = useState(false);
 
   return (
     <div className="header">
@@ -15,16 +15,25 @@ const Header = () => {
           <li>Contact Us</li>
           <li>About Us</li>
           <li>Cart</li>
-          <button
-            className="login"
-            onClick={() => {
-              btnNameReact === "Login"
-                ? setBtnNameReact("Logout")
-                : setBtnNameReact("Login");
-            }}
-          >
-            {btnNameReact}
-          </button>
+          {loggedInUser ? (
+            <button
+              className="login"
+              onClick={() => {
+                setLoggedInUser(false);
+              }}
+            >
+              logout
+            </button>
+          ) : (
+            <button
+              className="login"
+              onClick={() => {
+                setLoggedInUser(true);
+              }}
+            >
+              login
+            </button>
+          )}
         </ul>
       </div>
     </div>
