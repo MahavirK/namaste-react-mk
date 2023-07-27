@@ -1,0 +1,7 @@
+* useEffect:- 
+        * If NO dependency array => useEffect is called on every component render.
+        * If Empty dependency array = []=> useEffect is called only on the initial render (rendered only just once). 
+        * If any state in dependency array =[btnNameReact]=> called every time btnNameReact is update
+* useState :- 
+    * Never create or use state variable outside of the component
+
