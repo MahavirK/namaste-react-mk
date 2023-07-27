@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import resList from "../utils/mockData";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -9,7 +10,7 @@ const Body = () => {
 
   const searchRestaurants = (serachText) => {
     return restaurantList.filter((res) =>
-      res.data.name.toLowerCase().includes(serachText.toLowerCase())
+      res.info.name.toLowerCase().includes(serachText.toLowerCase())
     );
   };
 
@@ -21,13 +22,27 @@ const Body = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&page_type=DESKTOP_WEB_LISTING"
     );
-    console.log(data);
+
     const json = await data.json();
-    setRestaurantList(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+
+    /**
+     * Old API Destructuring Method
+     */
+    // setRestaurantList(json?.data?.cards[2]?.data?.data?.cards);
+    // setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    // const data = resList;
+    // setRestaurantList(data);
+    // setFilteredRestaurants(data);
+
+    setRestaurantList(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestaurants(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
-  return restaurantList.length === 0 ? (
+  return restaurantList?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -66,7 +81,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants.map((res) => {
-          return <RestaurantCard key={res.data.id} resData={res} />;
+          return <RestaurantCard key={res.info.id} resData={res} />;
         })}
       </div>
     </div>
