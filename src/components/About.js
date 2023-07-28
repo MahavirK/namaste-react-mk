@@ -5,19 +5,15 @@ import React from "react";
 class About extends React.Component {
   constructor() {
     super();
-    console.log("Parent Constructor");
   }
-  componentDidMount() {
-    console.log("Parent ComponentDidMount");
-  }
+  componentDidMount() {}
   render() {
-    console.log("Parent Render");
     return (
       <div>
         <h1>About Us page</h1>
         <h2>This is Namaste React Web series</h2>
 
-        <UserClass name={"First"} />
+        <UserClass />
       </div>
     );
   }
